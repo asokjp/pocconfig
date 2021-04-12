@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+
+message: This is dev enviornment for hello-world service

@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      port: 0
+      host: localhost
+      database: claimant
+
+message: This is integration enviornment

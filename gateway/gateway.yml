@@ -1,0 +1,34 @@
+spring:
+  pid:
+    file: helloworld.pid
+eureka:
+  instance:
+    hostname: helloworld
+zuul:
+  ignored-services:
+    '*'
+  ignore-local-service: false
+  prefix: /api
+  routes:
+    helloworld:
+      path:
+        /helloworld/**
+      strip-prefix:
+        true
+  trace-request-body: true 
+  host:
+    socket-timeout-millis: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  eager-load:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+    

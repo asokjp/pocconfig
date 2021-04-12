@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      port: 0
+      host: localhost
+      database: claimant
+  cloud:
+    bus:
+      enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+message: This is dev enviornment for claimant service
